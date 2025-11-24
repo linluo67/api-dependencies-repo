@@ -1,0 +1,35 @@
+{
+  "apis": {
+    "github": {
+      "baseUrl": "https://api.github.com",
+      "version": "v3",
+      "endpoints": {
+        "users": "https://api.github.com/users",
+        "repos": "https://api.github.com/repos"
+      }
+    },
+    "stripe": {
+      "baseUrl": "https://api.stripe.com/v1",
+      "apiKey": "sk_test_...",
+      "webhookUrl": "https://api.stripe.com/v1/webhooks"
+    },
+    "openai": {
+      "apiUrl": "https://api.openai.com/v1/chat/completions",
+      "apiKey": "sk-proj-xxx",
+      "models": {
+        "gpt4": "https://api.openai.com/v1/models/gpt-4",
+        "gpt35": "https://api.openai.com/v1/models/gpt-3.5-turbo"
+      }
+    }
+  },
+  "internal": {
+    "userService": "/api/v2/users",
+    "authEndpoint": "/api/auth/login",
+    "uploadUrl": "/api/upload"
+  },
+  "external": {
+    "weatherApi": "https://api.openweathermap.org/data/2.5/weather",
+    "paymentGateway": "https://sandbox-api.paypal.com/v2/payments",
+    "analyticsUrl": "https://www.google-analytics.com/collect"
+  }
+}
