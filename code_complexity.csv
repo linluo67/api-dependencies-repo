@@ -1,0 +1,17 @@
+文件路径,函数名,起始行,代码行数,圈复杂度,嵌套深度,维护性指数,复杂度等级,重复率(%),认知复杂度,预估重构时间(小时)
+src/auth.js,sendAnalytics,77,6,1,1,100,低复杂度,0.0,0,0
+src/auth.js,success,66,3,1,1,100,低复杂度,0.0,0,0
+src/auth.js,error,69,3,1,1,100,低复杂度,0.0,0,0
+src/data_service.py,__init__,15,42,10,10,100,中等复杂度,2.4,9,0.5
+src/data_service.py,get_user_data,19,43,11,10,100,高复杂度,4.7,11,0.5
+src/data_service.py,create_payment,30,35,9,10,100,中等复杂度,2.9,9,0.4
+src/data_service.py,upload_file_to_s3,55,14,3,6,100,低复杂度,0.0,3,0
+src/data_service.py,get_weather_data,60,10,3,4,100,低复杂度,0.0,3,0
+src/data_service.py,fetch_multiple_users,75,20,7,10,100,中等复杂度,0.0,3,0.2
+src/data_service.py,post_analytics_event,86,11,3,10,100,低复杂度,0.0,2,0
+src/data_service.py,update_user_profile,99,3,1,1,100,低复杂度,0.0,0,0
+src/data_service.py,get_internal_stats,103,3,1,1,100,低复杂度,0.0,0,0
+src/data_service.py,send_slack_notification,108,13,3,3,100,低复杂度,0.0,3,0
+src/data_service.py,generate_text,125,17,3,3,100,低复杂度,0.0,1,0
+src/data_service.py,fetch_multiple_users,75,20,7,10,100,中等复杂度,0.0,3,0.2
+src/data_service.py,post_analytics_event,86,11,3,10,100,低复杂度,0.0,2,0
