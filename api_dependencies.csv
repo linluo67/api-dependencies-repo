@@ -1,3 +1,47 @@
-文件路径,文件类型,API URL,HTTP方法,API类型,服务名称,API版本,认证方式,错误处理,依赖级别,安全等级,行号,上下文
-tests/locustfile.py,Python,/calculate,POST,内部API,内部接口,无版本,无认证,是,低依赖,中安全,29,with self.client.post("/calculate", json=op, catch_response=True) as response: if response.status_code == 200...
-tests/locustfile.py,Python,/complex_calculate,POST,内部API,内部接口,无版本,无认证,是,低依赖,中安全,48,with self.client.post("/complex_calculate", json=payload, catch_response=True) as response: if response.status_code == 200...
+文件路径,文件类型,API URL,HTTP方法,API类型,服务名称,API版本,认证方式,错误处理,依赖级别,安全等级,行号
+src/api-client.ts,TypeScript,https://api.twitter.com/2/tweets/search/recent,GET,外部API,Twitter API,v2,Bearer Token,是,中依赖,高安全,15
+src/api-client.ts,TypeScript,https://graph.facebook.com/v18.0/me/feed,POST,外部API,Facebook API,v18,Bearer Token,否,高依赖,中安全,36
+src/api-client.ts,TypeScript,/api/v2/users/${id},GET,内部API,内部接口,v2,无认证,否,低依赖,需加强,45
+src/api-client.ts,TypeScript,/upload,POST,内部API,内部接口,无版本,无认证,否,低依赖,需加强,53
+src/api-client.ts,TypeScript,https://api.amazonaws.com/${bucket}/${key},GET,外部API,AWS API,无版本,API Key,否,中依赖,中安全,58
+src/auth.js,JavaScript,https://api.github.com/user,POST,外部API,GitHub API,无版本,Bearer Token,是,高依赖,高安全,11
+src/auth.js,JavaScript,https://api.stripe.com/v1/customers/${userId},GET,外部API,Stripe API,v1,Bearer Token,是,中依赖,高安全,36
+src/auth.js,JavaScript,/api/v1/profile,PUT,内部API,内部接口,v1,无认证,否,低依赖,需加强,51
+src/auth.js,JavaScript,https://api.openai.com/v1/completions,GET,外部API,OpenAI API,v1,Bearer Token,是,中依赖,高安全,60
+src/auth.js,JavaScript,https://analytics.google.com/collect,POST,外部API,Google API,无版本,无认证,否,高依赖,需加强,79
+src/data_service.py,Python,https://api.github.com/users/${user_id},GET,外部API,GitHub API,无版本,API Key,是,中依赖,高安全,22
+src/data_service.py,Python,https://api.stripe.com/v1/payment_intents,POST,外部API,Stripe API,v1,Bearer Token,是,高依赖,高安全,39
+src/data_service.py,Python,https://api.amazonaws.com/bucket/file.txt,PUT,外部API,AWS API,无版本,无认证,否,高依赖,需加强,57
+src/data_service.py,Python,https://api.openweathermap.org/data/2.5/weather,GET,外部API,第三方服务(openweathermap),v2,API Key,是,中依赖,高安全,62
+src/data_service.py,Python,https://jsonplaceholder.typicode.com/users/${user_id},GET,外部API,第三方服务(jsonplaceholder),无版本,无认证,是,中依赖,中安全,80
+src/data_service.py,Python,https://analytics.google.com/v4/events,POST,外部API,Google API,v4,Bearer Token,是,高依赖,高安全,90
+src/data_service.py,Python,/api/v1/users/${user_id}/profile,PATCH,内部API,内部接口,v1,无认证,否,低依赖,需加强,101
+src/data_service.py,Python,/internal/stats,GET,内部API,内部接口,无版本,无认证,否,低依赖,需加强,105
+src/data_service.py,Python,https://hooks.slack.com/services/YOUR_WORKSPACE/YOUR_CHANNEL/YOUR_SECRET_TOKEN,POST,外部API,第三方服务(slack),无版本,无认证,是,高依赖,中安全,119
+src/data_service.py,Python,https://api.openai.com/v1/chat/completions,POST,外部API,OpenAI API,v1,Bearer Token,否,高依赖,中安全,138
+config/api-config.json,Config,https://api.github.com,GET,外部API,GitHub API,v3,无认证,否,中依赖,需加强,4
+config/api-config.json,Config,https://api.github.com/users,GET,外部API,GitHub API,无版本,无认证,否,中依赖,需加强,7
+config/api-config.json,Config,https://api.github.com/repos,GET,外部API,GitHub API,无版本,无认证,否,中依赖,需加强,8
+config/api-config.json,Config,https://api.stripe.com/v1,GET,外部API,Stripe API,v1,API Key,否,中依赖,中安全,12
+config/api-config.json,Config,https://api.stripe.com/v1/webhooks,GET,外部API,Stripe API,v1,无认证,否,中依赖,需加强,14
+config/api-config.json,Config,https://api.openai.com/v1/chat/completions,GET,外部API,OpenAI API,v1,API Key,否,中依赖,中安全,17
+config/api-config.json,Config,https://api.openai.com/v1/models/gpt-4,GET,外部API,OpenAI API,v1,无认证,否,中依赖,需加强,20
+config/api-config.json,Config,https://api.openai.com/v1/models/gpt-3.5-turbo,GET,外部API,OpenAI API,v1,无认证,否,中依赖,需加强,21
+config/api-config.json,Config,/api/v2/users,GET,内部API,内部接口,v2,无认证,否,低依赖,需加强,26
+config/api-config.json,Config,/api/auth/login,POST,内部API,内部接口,无版本,无认证,否,低依赖,需加强,27
+config/api-config.json,Config,/api/upload,POST,内部API,内部接口,无版本,无认证,否,低依赖,需加强,28
+config/api-config.json,Config,https://api.openweathermap.org/data/2.5/weather,GET,外部API,第三方服务(openweathermap),v2,无认证,否,中依赖,需加强,31
+config/api-config.json,Config,https://sandbox-api.paypal.com/v2/payments,GET,外部API,第三方服务(paypal),v2,无认证,否,中依赖,需加强,32
+config/api-config.json,Config,https://www.google-analytics.com/collect,GET,外部API,Google API,无版本,无认证,否,中依赖,需加强,33
+.env,Config,https://api.example.com,GET,外部API,第三方服务(example.com),无版本,无认证,否,中依赖,需加强,8
+.env,Config,https://api.stripe.com/v1,GET,外部API,Stripe API,v1,无认证,否,中依赖,需加强,9
+.env,Config,https://api.github.com,GET,外部API,GitHub API,无版本,无认证,否,中依赖,需加强,10
+.env,Config,https://api.openweathermap.org/data/2.5,GET,外部API,第三方服务(openweathermap),v2,无认证,否,中依赖,需加强,11
+.env,Config,https://analytics.google.com/collect,GET,外部API,Google API,无版本,无认证,否,中依赖,需加强,12
+.env,Config,/api/v2,GET,内部API,内部接口,v2,无认证,否,低依赖,需加强,15
+.env,Config,/api/v1/users,GET,内部API,内部接口,v1,无认证,否,低依赖,需加强,16
+.env,Config,/auth/login,POST,内部API,内部接口,无版本,无认证,否,低依赖,需加强,17
+.env,Config,/upload,POST,内部API,内部接口,无版本,无认证,否,低依赖,需加强,18
+.env,Config,https://hooks.slack.com/services/YOUR_WORKSPACE/YOUR_CHANNEL/YOUR_SECRET_TOKEN,GET,外部API,第三方服务(slack),无版本,无认证,否,中依赖,需加强,21
+.env,Config,https://graph.facebook.com/v18.0,GET,外部API,Facebook API,v18,无认证,否,中依赖,需加强,22
+.env,Config,https://api.amazonaws.com,GET,外部API,AWS API,无版本,无认证,否,中依赖,需加强,23
